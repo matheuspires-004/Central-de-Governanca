@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_page_property">
+    <sys_ux_page_property action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>sys_ux_applicability sys_id for Workspace audience</description>
+        <name>wbApplicabilityConfigId</name>
+        <page display_value="CRM URI">f2ffe3a7aa320210de8b9bf41bdb8e46</page>
+        <required_translations/>
+        <route/>
+        <suffix/>
+        <sys_class_name>sys_ux_page_property</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-21 11:47:35</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>global</sys_domain_path>
+        <sys_id>62ffe3a7053202107f429bf330ef4e36</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>wbApplicabilityConfigId</sys_name>
+        <sys_package display_value="Templates" source="x_1328471_templa_0">a8c42bd7933a42103bc83a5efaba1072</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Templates">a8c42bd7933a42103bc83a5efaba1072</sys_scope>
+        <sys_update_name>sys_ux_page_property_62ffe3a7053202107f429bf330ef4e36</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-21 11:47:39</sys_updated_on>
+        <type>string</type>
+        <unique_name>x_1328471_templa_0.f2ffe3a7aa320210de8b9bf41bdb8e46.root.wbApplicabilityConfigId</unique_name>
+        <value>bbff27a7933202103bc83a5efaba1032</value>
+    </sys_ux_page_property>
+    <sys_translated_text action="delete_multiple" query="documentkey=62ffe3a7053202107f429bf330ef4e36"/>
+</record_update>

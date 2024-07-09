@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="par_dashboard_visibility">
+    <par_dashboard_visibility action="INSERT_OR_UPDATE">
+        <dashboard display_value="CRM URI">36ffe3a7a1320210b93c5500b438e53f</dashboard>
+        <experience display_value="CRM URI">f2ffe3a7aa320210de8b9bf41bdb8e46</experience>
+        <sys_class_name>par_dashboard_visibility</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-21 11:47:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>76ffe3a7543202106b303e24914b8a3e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Templates" source="x_1328471_templa_0">a8c42bd7933a42103bc83a5efaba1072</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Templates">a8c42bd7933a42103bc83a5efaba1072</sys_scope>
+        <sys_update_name>par_dashboard_visibility_76ffe3a7543202106b303e24914b8a3e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-06-21 11:47:34</sys_updated_on>
+    </par_dashboard_visibility>
+</record_update>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_portal">
+    <sp_portal action="INSERT_OR_UPDATE">
+        <css_variables>$brand-primary:#815a17;&#13;
+$body-bg:#ffffff;&#13;
+$state-success-text:#1e4335;&#13;
+$sp-homepage-bg:#fff;&#13;
+$sp-navbar-divider-color:#e6ff00;&#13;
+$text-color:#2e2e2e;&#13;
+$sp-logo-margin-y:.5rem;&#13;
+$navbar-inverse-link-hover-color:#003857;&#13;
+$panel-bg:#ffffff;&#13;
+$brand-success:#48C891;&#13;
+$navbar-inverse-bg:#003857;&#13;
+$brand-warning:#DFD139;&#13;
+$brand-danger:#C83C36;&#13;
+$sp-tagline-color:#ffffff;&#13;
+$navbar-inverse-link-color:#ffffff;&#13;
+$brand-info:#6ABECF;&#13;
+$link-color:#1F8476;&#13;
+$sp-logo-margin-x:1.5rem;&#13;
+$btn-default-bg:$color-background-interactive-02;&#13;
+$text-muted:#666666;&#13;
+</css_variables>
+        <dark_theme/>
+        <default>false</default>
+        <enable_ais>false</enable_ais>
+        <enable_certificate_based_authentication>false</enable_certificate_based_authentication>
+        <enable_favorites>false</enable_favorites>
+        <hide_portal_name>false</hide_portal_name>
+        <homepage display_value="homepage_teste">f905631b933a42103bc83a5efaba101c</homepage>
+        <icon/>
+        <kb_knowledge_base/>
+        <kb_knowledge_page display_value="kb_view2">26c2e030d7201200a9addd173e24d437</kb_knowledge_page>
+        <login_page display_value="landing">36c61807cb31120000f8d856634c9ca9</login_page>
+        <logo>ab5060b3938b02103bc83a5efaba104c</logo>
+        <notfound_page display_value="404">3c2c9063cb11020000f8d856634c9c1f</notfound_page>
+        <quick_start_config/>
+        <rtl_enabled>false</rtl_enabled>
+        <sc_catalog/>
+        <sc_catalog_page/>
+        <sc_category_page/>
+        <search_application/>
+        <search_results_configuration/>
+        <sp_chat_queue/>
+        <sp_rectangle_menu display_value="Faz.ai Header Menu">a669d031935202103bc83a5efaba1097</sp_rectangle_menu>
+        <sys_class_name>sp_portal</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-20 16:22:08</sys_created_on>
+        <sys_id>d1e46fd7933a42103bc83a5efaba10da</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>[TEMPLATE] Teste</sys_name>
+        <sys_package display_value="Templates" source="x_1328471_templa_0">a8c42bd7933a42103bc83a5efaba1072</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Templates">a8c42bd7933a42103bc83a5efaba1072</sys_scope>
+        <sys_update_name>sp_portal_d1e46fd7933a42103bc83a5efaba10da</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 02:32:19</sys_updated_on>
+        <theme display_value="[TEMPLATE] Theme">b925e31b933a42103bc83a5efaba10a3</theme>
+        <title>[TEMPLATE] Teste</title>
+        <ts_index_group/>
+        <url_suffix>template_teste</url_suffix>
+    </sp_portal>
+    <sys_translated_text action="delete_multiple" query="documentkey=d1e46fd7933a42103bc83a5efaba10da"/>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color>#fdfdff</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <file_name>logo</file_name>
+        <hash>f77b4338d5fd1bf4548608754efd8a2a2a84d39c2b282bf0c054b80883d7b7af</hash>
+        <image_height>36</image_height>
+        <image_width>36</image_width>
+        <size_bytes>633</size_bytes>
+        <size_compressed>656</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 01:34:40</sys_created_on>
+        <sys_id>ab5060b3938b02103bc83a5efaba104c</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-04 01:34:41</sys_updated_on>
+        <table_name>ZZ_YYsp_portal</table_name>
+        <table_sys_id>d1e46fd7933a42103bc83a5efaba10da</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="logo" sys_id="ab5060b3938b02103bc83a5efaba104c">ab5060b3938b02103bc83a5efaba104c</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 01:34:40</sys_created_on>
+        <sys_id>eb5060b3938b02103bc83a5efaba104c</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>AXkChv2JUE5HDQoaCgAAAA1JSERSAAAAJAAAACQIBgAAAOEAmJgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAAg5JREFUeAHdmN1NAzEMxy0+X8sGHYERGKEjsAEwAWUC2AA2YISyQUe4Ecrbobsk5lzVJU2T2MmdBMJSBA9O8vfvHNsA8B+t67rrtm3nMMLoDJjCLOKjsQ5p0e9QaCTEOrfue7uEMcYHsRhvNVpafjCjBPkHpVaOVt/3N2EwVYIyVFLrgBYizgahzzFfFnSiFUMRn5yerREhTL5PZ/EBHT5Fts3PLy4bpvUFMLPWXR15IXwY072BxnJUrMVXipp9W8T5cGEj0TLG3O78Nl1n70FrmVxpKA9S+wi/lFskXl0qpFzRPG8trTFUVJSGz7HwBWtoVVFJLRZFuWSce49R2D7zElokplSIT4h+UoLG/LglCJ8Qj1qHtCGoGS9EJFdXiDZfkiPk+0Ut981DKqlLWLCUk+QHGovR0lDxBW/PSOdktmxItGqo3KVyyverNoHKhp46UzEOV5NSCS37ZI1bee1g8atUuAdpc4oDqxnixGeqKXjCI9C1DiHa/cxSSiV13pjWsb8k56csDSjSElrHfkPGT00ltUpbx2HB8/2GhsovaNfTioSMah1HY8Wu/hzu1xNSD/ZTDFfZwCQqoZifZ103XAnlYAla83pQQ4M4C9TSigxp9VRiPYj+qtDSEhrqEkosdVnYg0qGuGIqOUHSQcIQV0cldYH2oBStaiqhoNqDaoIRbWxERGuyfzj9NfsGKcnr/75shgMAAAAASUVORK5CYII3Sg0ZeQIAAA==</data>
+        <length>864</length>
+        <position>1</position>
+        <sys_attachment display_value="logo" sys_id="ab5060b3938b02103bc83a5efaba104c">ab5060b3938b02103bc83a5efaba104c</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-07-04 01:34:40</sys_created_on>
+        <sys_id>6f5060b3938b02103bc83a5efaba104c</sys_id>
+    </sys_attachment_doc>
+</record_update>

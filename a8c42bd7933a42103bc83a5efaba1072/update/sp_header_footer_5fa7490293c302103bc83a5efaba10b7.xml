@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[(function ($rootScope, $scope, snRecordWatcher, spUtil, $location, $uibModal, cabrillo, $timeout, $window) {
+
+	//Emite um evento para colapsar a barra de navegação.	
+	$scope.collapse = function() {
+		$rootScope.$emit('sp-navbar-collapse');
+	}
+
+	//Configura o perfil do avatar do usuário com informações do objeto $window.NOW.
+	$scope.avatarProfile = {
+		userID: $scope.user.sys_id,
+		name: $scope.user.name,
+		initials: $window.NOW.user_initials
+	};
+
+	if ($window.NOW.user_avatar) {
+		$scope.avatarProfile.userImage = $window.NOW.user_avatar;
+	}
+
+
+
+	//Verifica se o aplicativo está sendo visualizado em um dispositivo nativo e ajusta o layout com base na largura da tela.
+	if (cabrillo.isNative()) {
+		if ($window.innerWidth < 767) {
+			$scope.isViewNative = true;
+		} else {
+			$scope.isViewNativeTablet = true;
+		}
+	}
+
+
+	//Abre uma nova janela pop-up para suporte ao chat.
+	$scope.openPopUp = function() {
+		var url = "$chat_support.do?queueID=" + $scope.data.connect_support_queue_id;
+		var popup = window.open (url, "popup", "width=900, height=600");
+	};
+
+
+	//Abre um modal de login.
+	$scope.openLogin = function () {
+		$scope.modalInstance = $uibModal.open({
+			templateUrl: 'modalLogin',
+			scope: $scope
+		});
+	};
+
+
+	//Monitora mudanças no tamanho da tela e ajusta a exibição do avatar conforme necessário.
+	var xsScreenSize = isXSScreenSize();
+	$scope.showXSAvatar = isXSScreenSize();
+	$scope.showAvatar = !isXSScreenSize();
+
+	$scope.isAgentChatConfigured = g_has_agent_chat_config;
+
+	angular.element($window).on('resize', function () {
+		if(xsScreenSize !== isXSScreenSize() && (!$scope.showXSAvatar || !$scope.showAvatar)){
+			$scope.showXSAvatar = true;
+			$scope.showAvatar = true;
+		}
+	});
+
+
+	function isXSScreenSize() {
+		return $window.matchMedia('(max-width: 767px)').matches;
+	}
+
+	//Atualiza o avatar do usuário quando um evento de mudança de avatar é emitido.
+	$rootScope.$on('sp.avatar_changed', function(evt, obj) {
+		$scope.userID = "";
+		$scope.newAvatarId = obj.newAvatarId;
+		$timeout(function(){
+			$scope.userID = $scope.user.sys_id;
+			$("#profile-dropdown .sub-avatar").css("background-image", 'url("' + $scope.newAvatarId + '.iix?t=small")');
+		});
+	});
+
+	
+	//Verifica se a página atual é a página inicial do portal.
+	$scope.isHomepage = function() {
+		if (!$scope.page.id)
+			return true;
+
+		if ($scope.page.id == $scope.portal.homepage_dv)
+			return true;
+
+		return false;
+	};
+})]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.navbar {
+ 
+  background-color: #003857;
+  border-bottom: 2px solid #fcf82a;
+}
+
+/*.is-native{
+
+
+}*/
+
+.navbar-brand{
+
+
+  max-height: 10px;
+
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  
+}]]></link>
+        <name>[TEMPLATE]  Header 2.0</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-06-28 17:57:12</sys_created_on>
+        <sys_id>5fa7490293c302103bc83a5efaba10b7</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>[TEMPLATE]  Header 2.0</sys_name>
+        <sys_package display_value="Templates" source="x_1328471_templa_0">a8c42bd7933a42103bc83a5efaba1072</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Templates">a8c42bd7933a42103bc83a5efaba1072</sys_scope>
+        <sys_update_name>sp_header_footer_5fa7490293c302103bc83a5efaba10b7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-07-03 19:24:19</sys_updated_on>
+        <template><![CDATA[<div>
+  
+  <nav ng-class="::{'navbar':!isViewNative, 'is-native': isViewNative}" role="navigation" arial-label="${Primary}">
+
+
+    <!--Container left-->
+
+    <div ng-show="::!isViewNative" class="navbar-header">
+      
+      <h1>TESTEEEEE</h1>
+
+      <!--Não contém logo-->
+
+      <a class="navbar-brand" ng-if="::!portal.logo" href="?id={{::portal.homepage_dv}}"><span ng-bind="portal.title"></span></a>
+
+      <!--Contém logo-->
+      <a class="navbar-brand navbar-brand-logo" ng-if="::portal.logo" ng-href="?id={{::portal.homepage_dv}}" ng-click="collapse()" aria-label="${Go to homepage}">
+
+
+        <!--Icone faz.ai-->
+
+        <img ng-src="{{::portal.logo}}" title="{{::portal.title}}" role="presentation" alt="${Portal Logo}" />
+
+        <!--Título Portal-->
+
+        <span style="position:absolute">{{::portal.title}}</span>
+      </a>
+      
+    </div>
+
+
+
+      <!--_______________________________________________________________________________________________________________-->
+
+
+
+      <!--Container Right-->
+
+      <div sp-navbar-toggle="" class="collapse navbar-right" id="sp-nav-bar">
+
+        <!-- Include The Menu -->
+
+        <sp-widget widget="::data.menu"></sp-widget>
+
+
+        <!-- User Logged -->
+
+
+        <!-- Possibilidade 1 -->
+
+        <ul ng-if="(!user.logged_in && page.id != portal.login_page_dv && !data.hasLogin)" class="nav navbar-nav" role="presentation">
+          <li role="presentation"><a href ng-click="::openLogin()">${Login}</a></li>
+        </ul>
+
+
+
+        <!-- Possibilidade 2 -->
+
+        <ul ng-if="user.logged_in" class="nav navbar-nav" role="menubar">
+
+          <!-- chat, avatar, and logout -->
+
+          <li ng-if="::(data.connect_support_queue_id && !isAgentChatConfigured)" role="presentation"><a href ng-click="openPopUp()" role="menuitem">${Live Chat}</a></li>
+
+          <li ng-if="showAvatar" class="hidden-xs dropdown" role="presentation">
+
+            <a ng-if="data.show_avatar" href class="toggle-dropdown" data-toggle="dropdown" aria-expanded="false" title="{{::data.profileBtnMsg}}" aria-label="{{::data.profileBtnMsg}}: {{::user.name}}" id="profile-dropdown"  role="menuitem" aria-haspopup="true">
+
+
+              <!-- Avatar -->
+
+              <span class="navbar-avatar" aria-hidden="true">
+                <sn-avatar class="avatar-small-medium" primary="avatarProfile" />
+              </span>
+
+              <!-- Username -->
+              <span class="visible-lg-inline">{{::user.name}}</span>
+
+            </a>
+            
+          <li/>
+
+        </ul>
+      </div>
+      </nav>
+    </div>]]></template>
+    </sp_header_footer>
+</record_update>
